@@ -57,14 +57,14 @@ embedded-c-coding-bank/
 
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
-| 1 | Check if a number is odd/even using bitwise AND | ⭐⭐⭐ | [ ] |
-| 2 | Set, clear, and toggle the Nth bit of a number | ⭐⭐⭐ | [ ] |
-| 3 | Count the number of set bits (Hamming weight) | ⭐⭐⭐ | [ ] |
-| 4 | Check if a number is a power of 2 | ⭐⭐⭐ | [ ] |
-| 5 | Swap two numbers without a temp variable (XOR swap) | ⭐⭐⭐ | [ ] |
-| 6 | Find the only non-repeating element in an array (XOR trick) | ⭐⭐⭐ | [ ] |
-| 7 | Extract a bit field from a register value (mask + shift) | ⭐⭐⭐ | [ ] |
-| 8 | Reverse all bits of a 32-bit integer | ⭐⭐ | [ ] |
+| 1 | Check if a number is odd/even using bitwise AND | ⭐⭐⭐ | [Done] |
+| 2 | Set, clear, and toggle the Nth bit of a number | ⭐⭐⭐ | [Done] |
+| 3 | Count the number of set bits (Hamming weight) | ⭐⭐⭐ | [Done] |
+| 4 | Check if a number is a power of 2 | ⭐⭐⭐ | [Done] |
+| 5 | Swap two numbers without a temp variable (XOR swap) | ⭐⭐⭐ | [Done] |
+| 6 | Find the only non-repeating element in an array (XOR trick) | ⭐⭐⭐ | [Done] |
+| 7 | Extract a bit field from a register value (mask + shift) | ⭐⭐⭐ | [Done] |
+| 8 | Reverse all bits of a 32-bit integer | ⭐⭐ | [Done] |
 
 #### 🟣 Advanced — Senior / Competitive
 
