@@ -138,7 +138,7 @@ embedded-c-coding-bank/
 |---|---------|----------|------|
 | 29 | Factorial (iterative + recursive) | ⭐⭐⭐ | [Done] |
 | 30 | Fibonacci series (iterative + recursive) | ⭐⭐⭐ | [Done] |
-| 31 | Check if a number is prime | ⭐⭐⭐ | [ ] |
+| 31 | Check if a number is prime | ⭐⭐⭐ | [Done] |
 | 32 | Find GCD and LCM | ⭐⭐⭐ | [ ] |
 | 33 | Reverse digits of a number | ⭐⭐ | [ ] |
 | 34 | Print all prime numbers up to N (Sieve of Eratosthenes) | ⭐⭐ | [ ] |
