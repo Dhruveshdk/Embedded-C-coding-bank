@@ -85,9 +85,9 @@ embedded-c-coding-bank/
 
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
-| 12 | Find the largest and smallest element in an array | ⭐⭐⭐ | [ ] |
-| 13 | Reverse an array in-place | ⭐⭐⭐ | [ ] |
-| 14 | Find second largest element without sorting | ⭐⭐⭐ | [ ] |
+| 12 | Find the largest and smallest element in an array | ⭐⭐⭐ | [Done] |
+| 13 | Reverse an array in-place | ⭐⭐⭐ | [Done] |
+| 14 | Find second largest element without sorting | ⭐⭐⭐ | [Done] |
 | 15 | Implement `memcpy`, `memset`, `memmove` from scratch | ⭐⭐⭐ | [ ] |
 | 16 | Remove duplicates from a sorted array | ⭐⭐ | [ ] |
 | 17 | Rotate an array by K positions | ⭐⭐ | [ ] |
@@ -112,7 +112,7 @@ embedded-c-coding-bank/
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
 | 21 | Implement `strlen`, `strcpy`, `strcmp`, `strrev` | ⭐⭐⭐ | [ ] |
-| 22 | Check if a string is a palindrome | ⭐⭐⭐ | [ ] |
+| 22 | Check if a string is a palindrome | ⭐⭐⭐ | [Done] |
 | 23 | Reverse words in a sentence | ⭐⭐⭐ | [ ] |
 | 24 | Convert integer to string and string to integer (no `atoi`/`itoa`) | ⭐⭐⭐ | [ ] |
 | 25 | Count vowels, consonants, and words in a string | ⭐⭐ | [ ] |
