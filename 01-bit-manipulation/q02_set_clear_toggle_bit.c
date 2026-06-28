@@ -1,3 +1,4 @@
+// Set, clear, and toggle the Nth bit of a number
 #include <stdio.h>
 
 int SetFifthBit(int n) {
