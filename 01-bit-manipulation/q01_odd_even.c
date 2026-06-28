@@ -1,3 +1,4 @@
+//Check if a number is odd/even using bitwise AND
 #include <stdio.h>
 #include <stdint.h>
 
