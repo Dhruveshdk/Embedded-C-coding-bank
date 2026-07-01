@@ -1,167 +1,171 @@
-// Implement Singly LL - (Create, Insert, Delete, Display)
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-typedef struct node{
+/* ── Node structure ─────────────────────────────────────────── */
+typedef struct Node {
     int data;
-    struct node *next;
-}node;
+    struct Node *next;
+} Node;
 
-/* ── Helper: create a new node ──────────────────────────────── */
-node *create_node(int data)
-{
-    node *new_node = (node *)malloc(sizeof(node));
-    new_node->data = data;
-    new_node->next = NULL;
-    return new_node;
+/* ── Create a new node ──────────────────────────────────────── */
+Node* createNode(int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        printf("Memory allocation failed!\n");
+        exit(1);
+    }
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
 }
 
-/* ── Insert at the beginning ────────────────────────────────── */ 
-// void *insert_beg(int data, node *head){
-//     node *newNode = create_node(data);
-//     newNode->next = head;
-//     head = newNode;  // // ❌ this only changes the LOCAL copy of head
-//                        // original head in main() is unchanged
-// }
-
-// we use double ptr
-/* ── Insert at the beginning ────────────────────────────────── */ 
-void insert_beg(int data, node **head){
-    node *newNode = create_node(data);
+/* ── Insert at beginning ────────────────────────────────────── */
+void insertAtBegin(Node **head, int data) {
+    Node* newNode = createNode(data);
     newNode->next = *head;
     *head = newNode;
 }
 
-/* ── Insert at the end ──────────────────────────────────────── */
-void insert_end(int data, node **head){
-    node *newNode = create_node(data);
+/* ── Insert at end ──────────────────────────────────────────── */
+void insertAtEnd(Node **head, int data) {
+    Node* newNode = createNode(data);
 
-    if (*head == NULL) {      /* list is empty */
+    if (*head == NULL) {
         *head = newNode;
         return;
     }
-    node *temp = *head;
 
-    while(temp->next!=NULL){
+    Node* temp = *head;
+    while (temp->next != NULL)
         temp = temp->next;
-    }
+
     temp->next = newNode;
-    newNode->next = NULL;
 }
 
+/* ── Insert at position (1-indexed) ─────────────────────────── */
+void insertAtPosition(Node **head, int data, int pos) {
+    if (pos == 1) {
+        insertAtBegin(head, data);
+        return;
+    }
+
+    Node* temp = *head;
+    for (int i = 1; i < pos - 1 && temp != NULL; i++)
+        temp = temp->next;
+
+    if (temp == NULL) {
+        printf("Position %d out of range.\n", pos);
+        return;
+    }
+
+    Node* newNode = createNode(data);
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
 
 /* ── Insert after a given value ─────────────────────────────── */
-void insert_after_Value(int data, int after, node *head){
-    node *newNode = create_node(data);
-    node *temp = head;
-    while(temp->data!=after){
+void insertAfterValue(Node *head, int after, int data) {
+    Node* temp = head;
+
+    while (temp != NULL && temp->data != after)
         temp = temp->next;
+
+    if (temp == NULL) {
+        printf("Value %d not found.\n", after);
+        return;
     }
+
+    Node* newNode = createNode(data);
     newNode->next = temp->next;
     temp->next = newNode;
 }
 
 /* ── Delete by value ────────────────────────────────────────── */
-void delete_node(node **head, int data)
-{
+void deleteValue(Node **head, int key) {
     if (*head == NULL) {
-        printf("List is empty. Nothing to delete.\n");
+        printf("List is empty.\n");
         return;
     }
- 
-    node *temp = *head;
- 
-    /* If head itself is the node to delete */
-    if (temp->data == data) {
+
+    Node *temp = *head, *prev = NULL;
+
+    if (temp->data == key) {
         *head = temp->next;
         free(temp);
-        printf("Deleted: %d\n", data);
         return;
     }
- 
-    /* Find the node just before the one to delete */
-    node *prev = NULL;
-    while (temp != NULL && temp->data != data) {
+
+    while (temp != NULL && temp->data != key) {
         prev = temp;
         temp = temp->next;
     }
- 
+
     if (temp == NULL) {
-        printf("Value %d not found in list.\n", data);
+        printf("Value %d not found.\n", key);
         return;
     }
- 
-    prev->next = temp->next;  /* bypass the node */
+
+    prev->next = temp->next;
     free(temp);
-    printf("Deleted: %d\n", data);
 }
 
-/* ── Display the list ───────────────────────────────────────── */
-void display(node *head)
-{
+/* ── Display ─────────────────────────────────────────────────── */
+void display(Node *head) {
     if (head == NULL) {
         printf("List is empty.\n");
         return;
     }
- 
-    printf("List: ");
-    node *temp = head;
-    while (temp != NULL) {
-        printf("%d", temp->data);
-        if (temp->next != NULL)
-            printf(" -> ");
-        temp = temp->next;
+
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
     }
-    printf(" -> NULL\n");
+    printf("NULL\n");
 }
 
-/* ── Main: test all operations ──────────────────────────────── */
-int main(void)
-{
-    node *head = NULL;
- 
-    printf("=== Singly Linked List ===\n\n");
- 
-    /* Insert at end */
-    insert_at_end(&head, 10);
-    insert_at_end(&head, 20);
-    insert_at_end(&head, 30);
-    insert_at_end(&head, 40);
-    printf("After insert at end (10,20,30,40):\n");
+/* ── Free entire list ───────────────────────────────────────── */
+void freeList(Node **head) {
+    Node* temp;
+    while (*head != NULL) {
+        temp = *head;
+        *head = (*head)->next;
+        free(temp);
+    }
+}
+
+/* ── Main: test everything ──────────────────────────────────── */
+int main(void) {
+    Node* head = NULL;
+
+    insertAtEnd(&head, 10);
+    insertAtEnd(&head, 20);
+    insertAtEnd(&head, 30);
+    printf("After insert at end: ");
     display(head);
- 
-    /* Insert at beginning */
-    insert_at_begin(&head, 5);
-    printf("\nAfter insert at beginning (5):\n");
+
+    insertAtBegin(&head, 5);
+    printf("After insert at begin: ");
     display(head);
- 
-    /* Insert after a value */
-    insert_after(head, 20, 25);
-    printf("\nAfter insert 25 after 20:\n");
+
+    insertAtPosition(&head, 15, 3);
+    printf("After insert 15 at position 3: ");
     display(head);
- 
-    /* Delete from middle */
-    delete_node(&head, 25);
-    printf("\nAfter deleting 25:\n");
+
+    insertAfterValue(head, 20, 25);
+    printf("After insert 25 after 20: ");
     display(head);
- 
-    /* Delete head */
-    delete_node(&head, 5);
-    printf("\nAfter deleting head (5):\n");
+
+    deleteValue(&head, 15);
+    printf("After deleting 15: ");
     display(head);
- 
-    /* Delete tail */
-    delete_node(&head, 40);
-    printf("\nAfter deleting tail (40):\n");
+
+    deleteValue(&head, 5);
+    printf("After deleting head (5): ");
     display(head);
- 
-    /* Delete non-existent value */
-    printf("\nTrying to delete 99:\n");
-    delete_node(&head, 99);
- 
-    /* Final list */
-    printf("\nFinal list:\n");
+
+    freeList(&head);
+    printf("After freeList: ");
     display(head);
- 
+
     return 0;
 }
