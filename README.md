@@ -165,7 +165,7 @@ embedded-c-coding-bank/
 
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
-| 37 | Implement a singly linked list (insert, delete, display) | ⭐⭐⭐ | [ ] |
+| 37 | Implement a singly linked list (insert, delete, display) | ⭐⭐⭐ | [Done] |
 | 38 | Reverse a linked list (iterative) | ⭐⭐⭐ | [ ] |
 | 39 | Detect a cycle in a linked list (Floyd's algorithm) | ⭐⭐⭐ | [ ] |
 | 40 | Find the middle of a linked list | ⭐⭐⭐ | [ ] |
