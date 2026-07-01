@@ -303,17 +303,17 @@ embedded-c-coding-bank/
 
 | Phase | Topic | Basic | Advanced | Status |
 |-------|-------|-------|----------|--------|
-| Phase 1 | Bit Manipulation | 0 / 8 | 0 / 3 | 🔲 Not started |
-| Phase 1 | Pointers, Arrays & Memory | 0 / 6 | 0 / 3 | 🔲 Not started |
-| Phase 1 | Strings | 0 / 6 | 0 / 2 | 🔲 Not started |
-| Phase 1 | Math & Number Problems | 0 / 6 | 0 / 2 | 🔲 Not started |
-| Phase 2 | Linked Lists | 0 / 5 | 0 / 2 | 🔲 Not started |
-| Phase 2 | Stack, Queue & Circular Buffer | 0 / 4 | 0 / 2 | 🔲 Not started |
+| Phase 1 | Bit Manipulation | 8 / 8 | 0 / 3 | In-Progress |
+| Phase 1 | Pointers, Arrays & Memory | 3 / 6 | 0 / 3 | In-Progress |
+| Phase 1 | Strings | 1 / 6 | 0 / 2 | In-Progress |
+| Phase 1 | Math & Number Problems | 3 / 6 | 0 / 2 | In-Progress |
+| Phase 2 | Linked Lists | 2 / 5 | 0 / 2 | In-Progress |
+| Phase 2 | Stack, Queue & Circular Buffer | 1 / 4 | 0 / 2 | In-Progress |
 | Phase 2 | Structs, Unions & Bit-fields | 0 / 4 | 0 / 2 | 🔲 Not started |
 | Phase 2 | 2D Arrays & Matrices | 0 / 3 | 0 / 2 | 🔲 Not started |
 | Phase 3 | Sorting & Searching | 0 / 5 | 0 / 2 | 🔲 Not started |
 | Phase 3 | Patterns & State Machines | 0 / 4 | 0 / 2 | 🔲 Not started |
-| **Total** | | **0 / 58** | **0 / 22** | |
+| **Total** | | **18 / 58** | **0 / 22** | |
 
 > Update the tracker manually as you solve problems. Change `🔲 Not started` → `🟡 In progress` → `✅ Done`.
 
