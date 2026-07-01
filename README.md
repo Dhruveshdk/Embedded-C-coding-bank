@@ -166,7 +166,7 @@ embedded-c-coding-bank/
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
 | 37 | Implement a singly linked list (insert, delete, display) | ⭐⭐⭐ | [Done] |
-| 38 | Reverse a linked list (iterative) | ⭐⭐⭐ | [ ] |
+| 38 | Reverse a linked list (iterative) | ⭐⭐⭐ | [Done] |
 | 39 | Detect a cycle in a linked list (Floyd's algorithm) | ⭐⭐⭐ | [ ] |
 | 40 | Find the middle of a linked list | ⭐⭐⭐ | [ ] |
 | 41 | Merge two sorted linked lists | ⭐⭐ | [ ] |
@@ -189,7 +189,7 @@ embedded-c-coding-bank/
 
 | # | Problem | Priority | Done |
 |---|---------|----------|------|
-| 44 | Implement stack using an array (push, pop, peek, overflow check) | ⭐⭐⭐ | [ ] |
+| 44 | Implement stack using an array (push, pop, peek, overflow check) | ⭐⭐⭐ | [Done] |
 | 45 | Implement a circular buffer / ring buffer using an array | ⭐⭐⭐ | [ ] |
 | 46 | Implement a queue using an array (enqueue, dequeue, full/empty check) | ⭐⭐⭐ | [ ] |
 | 47 | Check for balanced parentheses using a stack | ⭐⭐⭐ | [ ] |
