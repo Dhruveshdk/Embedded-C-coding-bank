@@ -191,7 +191,7 @@ embedded-c-coding-bank/
 |---|---------|----------|------|
 | 44 | Implement stack using an array (push, pop, peek, overflow check) | ⭐⭐⭐ | [Done] |
 | 45 | Implement a circular buffer / ring buffer using an array | ⭐⭐⭐ | [ ] |
-| 46 | Implement a queue using an array (enqueue, dequeue, full/empty check) | ⭐⭐⭐ | [ ] |
+| 46 | Implement a queue using an array (enqueue, dequeue, full/empty check) | ⭐⭐⭐ | [Done] |
 | 47 | Check for balanced parentheses using a stack | ⭐⭐⭐ | [ ] |
 
 #### 🟣 Advanced — Senior / Competitive
